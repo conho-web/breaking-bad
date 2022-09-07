@@ -1,10 +1,18 @@
 import './App.scss';
-import Card from "./components/molecules/Card/Card";
+import Header from './components/organisms/Header/Header';
+import Catalog from "./components/organisms/Catalog/Catalog";
+import Footer from './components/organisms/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <Card />
+    <div className="wrapper">
+      <Header />
+      <div className="App">
+        <div className="container">
+          <Catalog />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }

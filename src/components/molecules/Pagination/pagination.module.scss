@@ -1,0 +1,61 @@
+@import 'src/assets/scss/bundle.scss';
+
+.wrapper {
+  display: flex;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $grey;
+  }
+}
+
+.threeNumbers {
+  display: flex;
+  align-items: center;
+
+  a {
+    margin: 0 1.25rem 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &.active {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      background-color: $white;
+      color: $yellow;
+      box-shadow: $shadow;
+    }
+  }
+}
+
+.dots {
+  a {
+    margin: 0 0.75rem;
+  }
+}
+
+.arrows {
+  margin: 0 0 0 2.75rem;
+
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    margin: 0 0 2rem 0;
+  }
+}
