@@ -1,10 +1,9 @@
-import styles from './App.css';
-import './assets/scss/bundle.scss';
-import Card from "./components/molecules/Card";
+import './App.scss';
+import Card from "./components/molecules/Card/Card";
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className="App">
       <Card />
     </div>
   );
