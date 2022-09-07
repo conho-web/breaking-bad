@@ -1,9 +1,10 @@
+@import './assets/scss/bundle.scss';
+
 .App {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Roboto';
   height: 100vh;
-  font-size: 86px;
-  background-color: #FBFBFB;
+  background-color: $background;
 }
