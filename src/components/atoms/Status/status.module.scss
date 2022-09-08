@@ -1,14 +1,28 @@
 @import 'src/assets/scss/bundle.scss';
 
-.wrapper {
+.alive, .noAlive {
   display: inline-block;
   padding: 0.5rem 0.75rem;
-  background-color: $light-green;
   margin: 0 0 0.625rem 0;
+
+  p {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
 }
 
-.text {
-  font-size: 0.75rem;
-  letter-spacing: 0.06em;
-  color: $green;
+.alive {
+  background-color: $light-green;
+
+  p {
+    color: $green;
+  }
+}
+
+.noAlive {
+  background-color: $light-red;
+
+  p {
+    color: $red;
+  }
 }

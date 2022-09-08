@@ -1,8 +1,8 @@
 import styles from './date.module.scss';
 
-function Date() {
+function Date(props) {
   return (
-    <p className={styles.date}>23.11.2001</p>
+    <p className={styles.date}>{props.date}</p>
   );
 }
 

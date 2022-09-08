@@ -1,10 +1,11 @@
 import styles from './footer.module.scss';
+import getCurrentDate from 'src/assets/utils/date/getCurrentDate';
 
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <p>2021</p>
-      <p>@author</p>
+      <p>{ getCurrentDate() }</p>
+      <p>@conho</p>
     </footer>
   )
 }

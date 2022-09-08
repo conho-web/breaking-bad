@@ -6,6 +6,41 @@ import Pagination from 'src/components/molecules/Pagination/Pagination';
 import Mapper from 'src/components/molecules/Mapper/Mapper';
 
 function Catalog() {
+  let cards = [
+    {
+      id: 1,
+      title: "Андрей Новик",
+      date: "12.04.2002",
+      alive: false,
+    },
+    {
+      id: 2,
+      title: "Максим Новик",
+      date: "02.02.2000",
+      alive: true,
+    },
+    {
+      id: 3,
+      title: "Антон Никончук",
+      date: "06.01.2004",
+      alive: true,
+    },
+    {
+      id: 4,
+      title: "Василий Новик",
+      date: "24.05.2003",
+      alive: true,
+    },
+    {
+      id: 5,
+      title: "Иван Туз",
+      date: "13.05.2003",
+      alive: false,
+    }
+  ];
+
+  let listItems = cards.map((card) => <Card key={card.id} title={card.title} date={card.date} alive={card.alive} /> );
+
   return (
     <div className={styles.catalog}>
       <Search />
@@ -15,11 +50,7 @@ function Catalog() {
           <RadioButons />
         </div>
         <div className={styles.cards}>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {listItems}
         </div>
         <div className={styles.navigation}>
           <Pagination />

@@ -7,15 +7,15 @@ function Pagination() {
     <div className={styles.wrapper}>
       <div className={styles.pagination}>
         <div className={styles.threeNumbers}>
-          <a href='/' className={styles.active}>1</a>
-          <a href='/'>2</a>
-          <a href='/'>3</a>
+          <button className={styles.active}>1</button>
+          <button>2</button>
+          <button>3</button>
         </div>
         <div className={styles.dots}>
-          <a href='/'>...</a>
+          <button>...</button>
         </div>
         <div className={styles.lastPage}>
-          <a href='/'>8</a>
+          <button>8</button>
         </div>
       </div>
       <div className={styles.arrows}>
