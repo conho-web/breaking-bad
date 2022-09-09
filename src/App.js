@@ -3,7 +3,7 @@ import Header from './components/organisms/Header/Header';
 import Catalog from "./components/organisms/Catalog/Catalog";
 import Footer from './components/organisms/Footer/Footer';
 
-function App() {
+let App = () => {
   return (
     <div className="wrapper">
       <Header />

@@ -1,7 +1,7 @@
 import styles from './footer.module.scss';
 import getCurrentDate from 'src/assets/utils/date/getCurrentDate';
 
-function Footer() {
+let Footer = () => {
   return (
     <footer className={styles.footer}>
       <p>{ getCurrentDate() }</p>

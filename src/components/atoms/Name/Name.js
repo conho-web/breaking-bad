@@ -1,8 +1,8 @@
 import styles from "./name.module.scss";
 
-function Name(props) {
+let Name = ({title}) => {
   return (
-    <p className={styles.name}>{props.title}</p>
+    <p className={styles.name}>{title}</p>
   );
 }
 

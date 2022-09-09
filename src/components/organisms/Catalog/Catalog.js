@@ -4,42 +4,11 @@ import RadioButons from 'src/components/molecules/RadioButtons/RadioButtons';
 import Card from 'src/components/molecules/Card/Card';
 import Pagination from 'src/components/molecules/Pagination/Pagination';
 import Mapper from 'src/components/molecules/Mapper/Mapper';
+import {useSelector} from 'react-redux';
 
-function Catalog() {
-  let cards = [
-    {
-      id: 1,
-      title: "Андрей Новик",
-      date: "12.04.2002",
-      alive: false,
-    },
-    {
-      id: 2,
-      title: "Максим Новик",
-      date: "02.02.2000",
-      alive: true,
-    },
-    {
-      id: 3,
-      title: "Антон Никончук",
-      date: "06.01.2004",
-      alive: true,
-    },
-    {
-      id: 4,
-      title: "Василий Новик",
-      date: "24.05.2003",
-      alive: true,
-    },
-    {
-      id: 5,
-      title: "Иван Туз",
-      date: "13.05.2003",
-      alive: false,
-    }
-  ];
-
-  let listItems = cards.map((card) => <Card key={card.id} title={card.title} date={card.date} alive={card.alive} /> );
+let Catalog = () => {
+  const cards = useSelector(state => state.cards.cards);
+  let listItems = cards.map(({id, title, date, alive}) => <Card key={id} title={title} date={date} alive={alive} /> );
 
   return (
     <div className={styles.catalog}>
@@ -48,7 +17,7 @@ function Catalog() {
         <div className={styles.title}>
           <h2>Каталог</h2>
           <RadioButons />
-        </div>
+        </div>  
         <div className={styles.cards}>
           {listItems}
         </div>

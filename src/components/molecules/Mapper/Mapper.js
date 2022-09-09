@@ -1,6 +1,6 @@
 import styles from './mapper.module.scss';
 
-function Mapper() {
+let Mapper = () => {
   return (
     <div className={styles.mapper}>
       <p className={styles.title}>Отобразить карточек:</p>

@@ -1,7 +1,7 @@
 import search from 'src/assets/img/search.svg';
 import styles from './search.module.scss';
 
-function Search() {
+let Search = () => {
   return (
     <label className={styles.search}>
       <input type="text" />

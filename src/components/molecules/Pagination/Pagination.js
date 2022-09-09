@@ -2,7 +2,7 @@ import arrowLeft from 'src/assets/img/arrow-left.svg';
 import arrowRight from 'src/assets/img/arrow-right.svg';
 import styles from './pagination.module.scss';
 
-function Pagination() {
+let Pagination = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.pagination}>

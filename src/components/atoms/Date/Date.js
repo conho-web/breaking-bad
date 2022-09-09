@@ -1,8 +1,8 @@
 import styles from './date.module.scss';
 
-function Date(props) {
+let Date = ({date}) => {
   return (
-    <p className={styles.date}>{props.date}</p>
+    <p className={styles.date}>{date}</p>
   );
 }
 

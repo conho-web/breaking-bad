@@ -1,17 +1,17 @@
 import styles from './status.module.scss';
 
-function Status(props) {
-  if (props.alive) {
+let Status = ({alive}) => {
+  if (alive === "НЕ ЖИВОЙ") {
     return (
-      <div className={styles.alive}>
-        <p>ЖИВОЙ</p>
+      <div className={styles.noAlive}>
+        <p>{alive}</p>
       </div>
     );
   }
 
   return (
-    <div className={styles.noAlive}>
-      <p>НЕ ЖИВОЙ</p>
+    <div className={styles.alive}>
+      <p>{alive}</p>
     </div>
   );
 }
