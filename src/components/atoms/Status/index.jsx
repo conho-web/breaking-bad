@@ -1,16 +1,16 @@
-import styles from './status.module.scss';
+import style from './style.module.scss';
 
 let Status = ({alive}) => {
   if (alive === "НЕ ЖИВОЙ") {
     return (
-      <div className={styles.noAlive}>
+      <div className={style.noAlive}>
         <p>{alive}</p>
       </div>
     );
   }
 
   return (
-    <div className={styles.alive}>
+    <div className={style.alive}>
       <p>{alive}</p>
     </div>
   );

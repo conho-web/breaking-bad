@@ -1,9 +1,9 @@
-import styles from './footer.module.scss';
+import style from './style.module.scss';
 import getCurrentDate from 'src/assets/utils/date/getCurrentDate';
 
 let Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={style.footer}>
       <p>{ getCurrentDate() }</p>
       <p>@conho</p>
     </footer>

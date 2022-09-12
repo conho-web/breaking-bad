@@ -2,7 +2,7 @@ import avatar from 'src/assets/img/avatar.jpg';
 
 let Avatar = () => {
   return (
-    <img src={ avatar } alt="" />
+    <img src={ avatar } alt=" " />
   );
 }
 

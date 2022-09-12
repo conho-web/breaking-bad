@@ -1,12 +1,12 @@
+import style from './style.module.scss';
 import logo from 'src/assets/img/logo.png';
 import burger from 'src/assets/img/burger.svg';
-import styles from './header.module.scss';
 
 let Header = () => {
   return (
-    <header className={styles.header}>
+    <header className={style.header}>
       <a href="/"><img src={logo} alt=" " /></a>
-      <button className={styles.burgerButton}> <img src={burger} className={styles.burgerImg}/>Каталог</button>
+      <button className={style.burgerButton}> <img src={burger} className={style.burgerImg} alt=" "/>Каталог</button>
     </header>
   )
 }

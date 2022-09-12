@@ -1,11 +1,11 @@
+import style from './style.module.scss';
 import search from 'src/assets/img/search.svg';
-import styles from './search.module.scss';
 
 let Search = () => {
   return (
-    <label className={styles.search}>
+    <label className={style.search}>
       <input type="text" />
-      <button> <img src={search} /> Найти</button>
+      <button> <img src={search} alt=" " /> Найти</button>
     </label>
   )
 }
