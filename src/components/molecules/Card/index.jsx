@@ -4,14 +4,14 @@ import Status from 'src/components/atoms/Status';
 import Name from 'src/components/atoms/Name';
 import Date from 'src/components/atoms/Date';
 
-let Card = ({title, date, alive}) => {
+let Card = ({name, birthday, status, img}) => {
   return (
     <div className={style.card}>
-      <Avatar />
+      <Avatar img={img} />
       <div className={style.wrapper}>
-        <Status alive={alive} />
-        <Name title={title} />
-        <Date date={date} />
+        <Status status={status} />
+        <Name name={name} />
+        <Date birthday={birthday} />
       </div>
     </div>
   );

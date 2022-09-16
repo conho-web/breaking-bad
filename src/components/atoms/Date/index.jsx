@@ -1,8 +1,8 @@
 import style from './style.module.scss';
 
-let Date = ({date}) => {
+let Date = ({birthday}) => {
   return (
-    <p className={style.date}>{date}</p>
+    <p className={style.date}>{birthday}</p>
   );
 }
 

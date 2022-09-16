@@ -1,17 +1,17 @@
 import style from './style.module.scss';
 
-let Status = ({alive}) => {
-  if (alive === "НЕ ЖИВОЙ") {
+let Status = ({status}) => {
+  if (status === "НЕ ЖИВОЙ") {
     return (
       <div className={style.noAlive}>
-        <p>{alive}</p>
+        <p>{status}</p>
       </div>
     );
   }
 
   return (
     <div className={style.alive}>
-      <p>{alive}</p>
+      <p>{status}</p>
     </div>
   );
 }

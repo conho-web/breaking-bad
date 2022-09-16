@@ -1,41 +1,26 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {v4 as uuidv4} from 'uuid';
+import {createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+
+export const getCards = createAsyncThunk(
+  'cards/getCards', 
+  async () => {
+    const responce = await fetch('https://www.breakingbadapi.com/api/characters');
+    const data = await responce.json();
+    return data; 
+  }
+)
 
 const cardsSlice = createSlice({
   name: "cards",
   initialState: {
-    cards: [
-      {
-        id: uuidv4(),
-        title: "Андрей Новик",
-        date: "12.04.2002",
-        alive: "НЕ ЖИВОЙ",
-      },
-      {
-        id: uuidv4(),
-        title: "Максим Новик",
-        date: "02.02.2000",
-        alive: "ЖИВОЙ",
-      },
-      {
-        id: uuidv4(),
-        title: "Антон Никончук",
-        date: "06.01.2004",
-        alive: "ЖИВОЙ",
-      },
-      {
-        id: uuidv4(),
-        title: "Василий Новик",
-        date: "24.05.2003",
-        alive: "ЖИВОЙ",
-      },
-      {
-        id: uuidv4(),
-        title: "Иван Туз",
-        date: "13.05.2003",
-        alive: "НЕ ЖИВОЙ",
-      }
-    ]
+    cards: [],
+  },
+  extraReducers: {
+    [getCards.pending]: (state, action) => {
+      console.log('123')
+    },
+    [getCards.fulfilled]: (state, action) => {
+      state.cards = action.payload;
+    },
   }
 })
 
