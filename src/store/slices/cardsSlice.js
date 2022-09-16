@@ -13,12 +13,14 @@ const cardsSlice = createSlice({
   name: "cards",
   initialState: {
     cards: [],
+    loading: false,
   },
   extraReducers: {
-    [getCards.pending]: (state, action) => {
-      console.log('123')
+    [getCards.pending]: (state) => {
+      state.loading = true;
     },
     [getCards.fulfilled]: (state, action) => {
+      state.loading = false;
       state.cards = action.payload;
     },
   }

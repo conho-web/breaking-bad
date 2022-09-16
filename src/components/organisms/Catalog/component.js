@@ -4,10 +4,11 @@ import RadioButons from 'src/components/molecules/RadioButtons';
 import Card from 'src/components/molecules/Card';
 import Pagination from 'src/components/molecules/Pagination';
 import Mapper from 'src/components/molecules/Mapper';
+import Loading from 'src/components/atoms/Loading/index';
 
 let Catalog = ({cards}) => {
   let listItems = cards.map(({char_id, name, birthday, status, img}) => <Card key={char_id} name={name} birthday={birthday} status={status} img={img} /> );
-
+  
   return (
     <div className={style.catalog}>
       <Search />
@@ -16,6 +17,7 @@ let Catalog = ({cards}) => {
           <h2>Каталог</h2>
           <RadioButons />
         </div>  
+        <Loading />
         <div className={style.cards}>
           {listItems}
         </div>

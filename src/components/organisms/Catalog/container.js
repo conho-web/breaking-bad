@@ -1,4 +1,4 @@
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getCards } from 'src/store/slices/cardsSlice';
 import Catalog from './component';
@@ -12,7 +12,7 @@ let CatalogContainer = () => {
   }, []);
 
   return (
-    <Catalog cards={cards}/>
+    <Catalog cards={cards} />
   )
 }
 
