@@ -1,8 +1,8 @@
 import style from "./style.module.scss";
 
-let Name = ({title}) => {
+let Name = ({name}) => {
   return (
-    <p className={style.name}>{title}</p>
+    <p className={style.name}>{name}</p>
   );
 }
 

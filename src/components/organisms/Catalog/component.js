@@ -6,7 +6,7 @@ import Pagination from 'src/components/molecules/Pagination';
 import Mapper from 'src/components/molecules/Mapper';
 
 let Catalog = ({cards}) => {
-  let listItems = cards.map(({id, title, date, alive}) => <Card key={id} title={title} date={date} alive={alive} /> );
+  let listItems = cards.map(({char_id, name, birthday, status, img}) => <Card key={char_id} name={name} birthday={birthday} status={status} img={img} /> );
 
   return (
     <div className={style.catalog}>

@@ -1,8 +1,8 @@
-import avatar from 'src/assets/img/avatar.jpg';
+import style from './style.module.scss';
 
-let Avatar = () => {
+let Avatar = ({img}) => {
   return (
-    <img src={ avatar } alt=" " />
+    <div className={style.wrapper} style={{backgroundImage: 'url('+img+')'}}></div>
   );
 }
 
